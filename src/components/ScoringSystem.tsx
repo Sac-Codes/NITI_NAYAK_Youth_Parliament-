@@ -68,10 +68,10 @@ export const ScoringSystem: React.FC = () => {
                 </span>
               </div>
               <p className="font-serif-editorial text-xl font-bold text-[#F2EBDD] mb-2">
-                MINIMUM 10 DELEGATES REQUIRED
+                MINIMUM 8 DELEGATES REQUIRED
               </p>
               <p className="font-sans-ui text-xs text-[#F2EBDD]/80 leading-relaxed">
-                A delegation must have a minimum of <strong>10 delegates</strong> registered and participating across committees to qualify for the Best Delegation Award. This applies to both Institutional and School delegations.
+                A delegation must have a minimum of <strong>8 delegates</strong> registered and participating across committees to qualify for the Best Delegation Award. This applies to both Institutional and School delegations.
               </p>
             </div>
 
@@ -188,7 +188,7 @@ export const ScoringSystem: React.FC = () => {
 
                 {!isEligible && (
                   <p className="text-xs text-[#A9432B] font-semibold mt-2">
-                    ⚠️ Warning: Minimum 10 delegates required to enter final tally.
+                    ⚠️ Warning: Minimum 8 delegates required to enter final tally.
                   </p>
                 )}
 

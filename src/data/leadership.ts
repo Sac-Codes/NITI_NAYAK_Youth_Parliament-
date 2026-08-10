@@ -2,6 +2,7 @@ export interface SecretariatMember {
   name: string;
   role: string;
   phone: string;
+  whatsapp?: string;
   initials: string;
 }
 

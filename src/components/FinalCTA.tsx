@@ -43,7 +43,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterClick }) => {
           </button>
 
           <a
-            href="#committees"
+            href="/committees"
             className="w-full sm:w-auto px-8 py-4 rounded text-xs font-sans-ui font-semibold tracking-[0.2em] text-[#F2EBDD] border border-[#C8A45D]/40 bg-[#10162B]/80 hover:bg-[#10162B] hover:border-[#C8A45D] transition-colors"
           >
             EXPLORE COMMITTEES

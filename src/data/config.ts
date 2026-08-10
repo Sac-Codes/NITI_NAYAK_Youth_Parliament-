@@ -3,9 +3,10 @@ export interface EventConfig {
   edition: string;
   tagline: string;
   dates: string;
-  startDateISO: string; // ISO date string for countdown timer
+  startDateISO: string;
   venue: string;
-  registrationUrl: string; // Empty string triggers "Coming Soon / Contact Organisers" state
+  registrationUrl: string;
+  backedBy: string;
   contactNumbers: {
     name: string;
     role: string;
@@ -19,10 +20,11 @@ export const eventConfig: EventConfig = {
   name: "NITI NAYAK",
   edition: "Youth Summit 2026",
   tagline: "Ideas • Leadership • Debate • Impact",
-  dates: "29–30 August 2026",
-  startDateISO: "2026-08-29T00:00:00+05:30",
-  venue: "Venue — To Be Announced",
-  registrationUrl: "", // Organisers to update with official form link
+  dates: "9–10 October 2026",
+  startDateISO: "2026-10-09T00:00:00+05:30",
+  venue: "To Be Announced",
+  registrationUrl: "",
+  backedBy: "Mantavya Group",
   collaboration: "Organised in collaboration with the Discussion and Debating Society, Faculty of Law",
   contactNumbers: [
     {

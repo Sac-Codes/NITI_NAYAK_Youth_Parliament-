@@ -103,7 +103,7 @@ export const Countdown: React.FC = () => {
 
         <div className="mt-8 flex items-center justify-center gap-2 text-xs font-sans-ui text-[#F2EBDD]/60">
           <Calendar className="w-3.5 h-3.5 text-[#C8A45D]" />
-          <span>Official Event Date: 29–30 August 2026</span>
+          <span>Official Event Date: 9–10 October 2026</span>
         </div>
       </div>
     </section>

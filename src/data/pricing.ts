@@ -14,9 +14,9 @@ export const pricingTiers: PricingTier[] = [
   },
   {
     category: "BHU Students",
-    amount: "To Be Confirmed",
-    note: "Source contains both ₹999 and ₹799 — Subject to organiser confirmation",
-    isConfirmed: false,
+    amount: "₹999 / ₹799",
+    note: "UN & Indian Committees: ₹999 | International Press: ₹799",
+    isConfirmed: true,
   },
   {
     category: "International Press",
@@ -37,14 +37,16 @@ export const scoringSystemData = {
     { award: "Best Delegate", points: 10 },
     { award: "High Commendation", points: 8 },
     { award: "Special Mention", points: 5 },
-    { award: "IP: Best Caricaturist", points: 5 },
-    { award: "IP: Best Reporter", points: 5 },
-    { award: "IP: Best Photographer", points: 5 },
+    { award: "Best Reporter", points: 5 },
+    { award: "Best Photographer", points: 5 },
+    { award: "Best Caricaturist", points: 5 },
   ],
-  requirement: "A delegation must have a minimum of 10 delegates to qualify for the Best Delegation Award. This rule applies to both Institutional delegations and School delegations.",
+  requirement: "A delegation must have a minimum of 8 delegates to qualify for the Best Delegation Award. This rule applies to both Institutional delegations and School delegations.",
   tieBreakers: [
-    "1. Delegation with a greater number of Honourable Mentions across all committees.",
-    "2. If still tied, delegation with the highest number of Verbal awards.",
+    "1. More High Commendations",
+    "2. More Special Mentions",
+    "3. More Verbal Mentions",
+    "4. If still tied: Decision of the Conference Secretariat",
   ],
 };
 
@@ -63,6 +65,6 @@ export const delegationPolicyRules = [
   },
   {
     title: "BEST DELEGATION ELIGIBILITY",
-    description: "Delegations must maintain a minimum threshold of 10 delegates across committees to qualify for the Best Delegation Trophy.",
+    description: "Delegations must maintain a minimum threshold of 8 delegates across committees to qualify for the Best Delegation Trophy.",
   },
 ];

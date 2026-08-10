@@ -15,7 +15,7 @@ export const faqsData: FAQItem[] = [
     category: "General",
     question: "When and where is the summit being held?",
     answer:
-      "The summit will take place on 29–30 August 2026. The venue details are currently To Be Announced by the organisers.",
+      "The summit will take place on 9–10 October 2026. The venue details are currently To Be Announced by the organisers.",
   },
   {
     category: "General",
@@ -39,7 +39,7 @@ export const faqsData: FAQItem[] = [
     category: "Delegation",
     question: "What is the requirement for Best Delegation?",
     answer:
-      "A delegation must have a minimum of 10 delegates to qualify for the Best Delegation Award. This rule applies equally to both Institutional delegations and School delegations.",
+      "A delegation must have a minimum of 8 delegates to qualify for the Best Delegation Award. This rule applies equally to both Institutional delegations and School delegations.",
   },
   {
     category: "Delegation",
@@ -55,9 +55,9 @@ export const faqsData: FAQItem[] = [
   },
   {
     category: "Registration",
-    question: "What is the BHU Student Fee?",
+    question: "What are the student fees?",
     answer:
-      "The official brochure contains two references for BHU Students (₹999 and ₹799). This fee structure is currently To Be Confirmed by the organisers.",
+      "School / College delegates in UN & Indian Committees pay ₹1,099 per delegate, while International Press delegates pay ₹999. BHU students pay ₹999 in UN & Indian Committees and ₹799 in International Press. Accommodation is ₹3,000 per participant.",
   },
   {
     category: "Registration",
