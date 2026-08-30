@@ -2,6 +2,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, Route, Routes, useLocation, useParams } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
+import { SEO } from "./components/SEO";
 import { Hero } from "./components/Hero";
 import { Countdown } from "./components/Countdown";
 import { FourPillars } from "./components/FourPillars";
@@ -525,6 +526,7 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#080B16] text-[#F2EBDD] selection:bg-[#C8A45D] selection:text-[#080B16]">
+      <SEO />
       <Navbar />
       <AnimatePresence mode="wait">
         <motion.main

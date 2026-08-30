@@ -19,14 +19,17 @@ export const Hero: React.FC = () => {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.4 }} className="mb-5 flex items-center justify-center">
-          <img src={logoImage} alt="NITI NAYAK official logo" className="h-28 w-28 rounded-full border border-[#C8A45D]/40 bg-[#10162B] object-cover shadow-2xl shadow-[#C8A45D]/10 sm:h-36 sm:w-36" />
+          <img src={logoImage} alt="NITI NAYAK Youth Summit 2026 Official Logo" className="h-28 w-28 rounded-full border border-[#C8A45D]/40 bg-[#10162B] object-cover shadow-2xl shadow-[#C8A45D]/10 sm:h-36 sm:w-36" />
         </motion.div>
 
-        <motion.h1 initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.45 }} className="mb-3 font-serif-editorial text-6xl font-bold leading-none tracking-tight text-[#F2EBDD] sm:text-7xl md:text-8xl lg:text-9xl">NITI NAYAK</motion.h1>
+        <motion.h1 initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.45 }} className="mb-3 font-serif-editorial text-6xl font-bold leading-none tracking-tight text-[#F2EBDD] sm:text-7xl md:text-8xl lg:text-9xl">
+          NITI NAYAK
+          <span className="block mt-2 font-serif-editorial text-2xl font-medium italic tracking-wide text-[#D8C8A8] sm:text-3xl md:text-4xl lg:text-5xl">
+            YOUTH SUMMIT 2026
+          </span>
+        </motion.h1>
 
         <motion.div initial={{ width: 0 }} animate={{ width: "160px" }} transition={{ duration: 0.8, delay: 0.6 }} className="my-4 h-[2px] bg-gradient-to-r from-transparent via-[#C8A45D] to-transparent" />
-
-        <motion.h2 initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.7 }} className="mb-6 font-serif-editorial text-2xl font-medium italic tracking-wide text-[#D8C8A8] sm:text-3xl md:text-4xl">YOUTH SUMMIT 2026</motion.h2>
 
         <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9 }} className="mb-8 max-w-2xl text-sm font-sans-ui font-medium tracking-[0.2em] uppercase text-[#C8A45D] sm:text-base md:text-lg">
           {eventConfig.tagline}
