@@ -20,7 +20,7 @@ const routeMetadata: Record<string, RouteMeta> = {
   "/committees": {
     title: "Committees & Agendas | NITI NAYAK Youth Summit 2026",
     description:
-      "Explore the 5 official committees of NITI NAYAK 2026: IPPM, Lok Sabha, UNCSW, UNHRC, and Mahabharat. Review background guides and agendas.",
+      "Explore the 5 official committees of NITI NAYAK 2026: AIPPM, Lok Sabha, UNCSW, UNHRC, and Mahabharat. Review background guides and agendas.",
   },
   "/agendas": {
     title: "Official Agendas | NITI NAYAK Youth Summit 2026",

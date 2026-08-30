@@ -13,8 +13,8 @@ export interface Committee {
 
 export const committeesData: Committee[] = [
   {
-    id: "ippm",
-    name: "IPPM",
+    id: "aippm",
+    name: "AIPPM",
     fullName: "All India Political Parties Meet",
     eligibility: "Open to All",
     category: "Indian Parliamentary / Executive",

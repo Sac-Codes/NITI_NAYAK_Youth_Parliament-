@@ -27,13 +27,13 @@ export const faqsData: FAQItem[] = [
     category: "Committees",
     question: "What committees are featured at NITI NAYAK 2026?",
     answer:
-      "The 2026 edition features five specialized simulation forums: 1) All India Political Parties Meet (IPPM), 2) Lok Sabha, 3) United Nations Commission on the Status of Women (UNCSW), 4) United Nations Human Rights Council (UNHRC), and 5) Mahabharat.",
+      "The 2026 edition features five specialized simulation forums: 1) All India Political Parties Meet (AIPPM), 2) Lok Sabha, 3) United Nations Commission on the Status of Women (UNCSW), 4) United Nations Human Rights Council (UNHRC), and 5) Mahabharat.",
   },
   {
     category: "Committees",
     question: "What are the official agendas for the committees?",
     answer:
-      "The agendas are: IPPM — Global impact of India's foreign policies in light of recent civilian protests ongoing in India; Lok Sabha — Constitutional provisions of Emergency (Article 356) and scope of misusing constitutional and statutory institutional machinery; UNCSW — Deliberation on the issue of Female Genital Mutilation; UNHRC — Deliberation on the protection of human rights in conflict zones; and Mahabharat — The Battle Between Truth and Falsehood: Duty, Rights, and Justice.",
+      "The agendas are: AIPPM — Global impact of India's foreign policies in light of recent civilian protests ongoing in India; Lok Sabha — Constitutional provisions of Emergency (Article 356) and scope of misusing constitutional and statutory institutional machinery; UNCSW — Deliberation on the issue of Female Genital Mutilation; UNHRC — Deliberation on the protection of human rights in conflict zones; and Mahabharat — The Battle Between Truth and Falsehood: Duty, Rights, and Justice.",
   },
   {
     category: "Delegation",

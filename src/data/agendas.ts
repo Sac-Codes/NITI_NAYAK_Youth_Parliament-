@@ -11,9 +11,9 @@ export interface AgendaItem {
 
 export const agendasData: AgendaItem[] = [
   {
-    id: "agenda-ippm",
-    committeeId: "ippm",
-    committeeName: "IPPM",
+    id: "agenda-aippm",
+    committeeId: "aippm",
+    committeeName: "AIPPM",
     title: "Discussing the global impact of India's foreign policies in light of recent civilian protests ongoing in India",
     theme: "Foreign Policy & Geopolitics",
     eligibility: "Open to All",
