@@ -130,7 +130,7 @@ const HomePage: React.FC = () => (
     <Messages />
     <VenueContact />
     <FAQ />
-    <FinalCTA onRegisterClick={() => {}} />
+    <FinalCTA />
   </>
 );
 

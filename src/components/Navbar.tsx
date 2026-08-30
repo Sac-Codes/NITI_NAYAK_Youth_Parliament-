@@ -75,9 +75,14 @@ export const Navbar: React.FC = () => {
           </nav>
 
           <div className="hidden items-center gap-4 lg:flex">
-            <Link to="/registration" className="rounded bg-[#C8A45D] px-5 py-2.5 text-xs font-sans-ui font-semibold tracking-[0.2em] uppercase text-[#080B16] shadow-md shadow-[#C8A45D]/10 transition-all hover:bg-[#D8C8A8]">
+            <a
+              href={eventConfig.registrationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded bg-[#C8A45D] px-5 py-2.5 text-xs font-sans-ui font-semibold tracking-[0.2em] uppercase text-[#080B16] shadow-md shadow-[#C8A45D]/10 transition-all hover:bg-[#D8C8A8]"
+            >
               Register
-            </Link>
+            </a>
           </div>
 
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden p-2 text-[#F2EBDD] hover:text-[#C8A45D] focus:outline-none" aria-label="Toggle menu">
@@ -99,9 +104,15 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className="mt-8 flex flex-col gap-4 border-t border-[#C8A45D]/20 pt-6">
-            <Link to="/registration" onClick={() => setMobileMenuOpen(false)} className="w-full rounded bg-[#C8A45D] py-3 text-center text-xs font-sans-ui font-semibold tracking-[0.2em] uppercase text-[#080B16]">
+            <a
+              href={eventConfig.registrationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full rounded bg-[#C8A45D] py-3 text-center text-xs font-sans-ui font-semibold tracking-[0.2em] uppercase text-[#080B16]"
+            >
               Register Now
-            </Link>
+            </a>
             <p className="text-center text-[11px] font-sans-ui text-[#F2EBDD]/60">{eventConfig.dates} • {eventConfig.venue}</p>
           </div>
         </div>

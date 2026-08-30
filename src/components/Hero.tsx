@@ -39,10 +39,15 @@ export const Hero: React.FC = () => {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.2 }} className="flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row">
-          <Link to="/registration" className="flex w-full items-center justify-center gap-2 rounded px-8 py-4 text-xs font-sans-ui font-bold tracking-[0.2em] uppercase text-[#080B16] bg-gradient-to-r from-[#C8A45D] via-[#D8C8A8] to-[#C8A45D] transition-all duration-300 hover:shadow-lg hover:shadow-[#C8A45D]/25 sm:w-auto">
+          <a
+            href={eventConfig.registrationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-full items-center justify-center gap-2 rounded px-8 py-4 text-xs font-sans-ui font-bold tracking-[0.2em] uppercase text-[#080B16] bg-gradient-to-r from-[#C8A45D] via-[#D8C8A8] to-[#C8A45D] transition-all duration-300 hover:shadow-lg hover:shadow-[#C8A45D]/25 sm:w-auto"
+          >
             <span>Register now</span>
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+          </a>
 
           <Link to="/committees" className="w-full rounded border border-[#C8A45D]/40 bg-[#10162B]/60 px-8 py-4 text-center text-xs font-sans-ui font-semibold tracking-[0.2em] uppercase text-[#F2EBDD] transition-all duration-300 hover:border-[#C8A45D] hover:bg-[#10162B] sm:w-auto">Explore Committees</Link>
         </motion.div>

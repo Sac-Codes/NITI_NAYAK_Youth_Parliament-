@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import { eventConfig } from "../data/config";
 import { ArrowRight } from "lucide-react";
 
-interface FinalCTAProps {
-  onRegisterClick: () => void;
-}
-
-export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterClick }) => {
+export const FinalCTA: React.FC = () => {
   return (
     <section className="py-32 bg-[#080B16] text-[#F2EBDD] relative overflow-hidden text-center border-t border-[#C8A45D]/30">
       {/* Background Architectural Layer */}
@@ -35,14 +31,15 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterClick }) => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <Link
-            to="/registration"
-            onClick={onRegisterClick}
+          <a
+            href={eventConfig.registrationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto px-10 py-4 rounded text-xs font-sans-ui font-bold tracking-[0.2em] text-[#080B16] bg-gradient-to-r from-[#C8A45D] via-[#D8C8A8] to-[#C8A45D] hover:shadow-xl hover:shadow-[#C8A45D]/25 transition-all duration-300 flex items-center justify-center gap-2 group active:scale-95 cursor-pointer"
           >
             <span>REGISTER NOW</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </a>
 
           <Link
             to="/committees"
