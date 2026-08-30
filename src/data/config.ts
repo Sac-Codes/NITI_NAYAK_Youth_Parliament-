@@ -6,7 +6,6 @@ export interface EventConfig {
   startDateISO: string;
   venue: string;
   registrationUrl: string;
-  backedBy: string;
   socialHandle: string;
   contactNumbers: {
     name: string;
@@ -25,7 +24,6 @@ export const eventConfig: EventConfig = {
   startDateISO: "2026-11-01T09:00:00+05:30",
   venue: "To Be Announced",
   registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSd_gP1u_nNX0S9iRuEtxhGCPMCkrpraxoRKiUygJtpehSRHAw/viewform?pli=1",
-  backedBy: "Mantavya Group",
   socialHandle: "@NITINAYAK_YS",
   collaboration: "Organised in collaboration with the Discussion and Debating Society, Faculty of Law",
   contactNumbers: [

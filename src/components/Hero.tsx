@@ -36,9 +36,9 @@ export const Hero: React.FC = () => {
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.0 }} className="mb-10 flex w-full max-w-xl flex-col items-center justify-center gap-3 border-y border-[#C8A45D]/20 bg-[#10162B]/40 px-6 py-3 text-xs font-sans-ui text-[#F2EBDD]/80 sm:flex-row sm:text-sm">
-          <span className="font-bold uppercase tracking-[0.2em] text-[#F2EBDD]">{eventConfig.dates}</span>
+          <span className="font-bold uppercase tracking-[0.2em] text-[#F2EBDD]">📅 {eventConfig.dates}</span>
           <span className="hidden text-[#C8A45D] sm:inline">•</span>
-          <span className="italic text-[#D8C8A8]">{eventConfig.backedBy}</span>
+          <span className="font-medium text-[#D8C8A8]">📍 {eventConfig.venue}</span>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.2 }} className="flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row">
