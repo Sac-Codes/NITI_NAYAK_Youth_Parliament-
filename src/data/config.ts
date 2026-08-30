@@ -7,6 +7,7 @@ export interface EventConfig {
   venue: string;
   registrationUrl: string;
   backedBy: string;
+  socialHandle: string;
   contactNumbers: {
     name: string;
     role: string;
@@ -20,11 +21,12 @@ export const eventConfig: EventConfig = {
   name: "NITI NAYAK",
   edition: "Youth Summit 2026",
   tagline: "Ideas • Leadership • Debate • Impact",
-  dates: "9–10 October 2026",
-  startDateISO: "2026-10-09T00:00:00+05:30",
+  dates: "1st–2nd November 2026",
+  startDateISO: "2026-11-01T09:00:00+05:30",
   venue: "To Be Announced",
   registrationUrl: "",
   backedBy: "Mantavya Group",
+  socialHandle: "@NITINAYAK_YS",
   collaboration: "Organised in collaboration with the Discussion and Debating Society, Faculty of Law",
   contactNumbers: [
     {
@@ -34,16 +36,16 @@ export const eventConfig: EventConfig = {
       whatsapp: "916387970508",
     },
     {
-      name: "Suyash Pandey",
-      role: "Core Member",
-      phone: "+91 92771 17310",
-      whatsapp: "919277117310",
+      name: "Suryansh Singh",
+      role: "Secretariat Member",
+      phone: "+91 91408 63986",
+      whatsapp: "919140863986",
     },
     {
-      name: "Ishan Agrawal",
-      role: "Core Member",
-      phone: "+91 70815 69808",
-      whatsapp: "917081569808",
+      name: "Riya Singh",
+      role: "Secretariat Member",
+      phone: "+91 87566 13364",
+      whatsapp: "918756613364",
     },
   ],
 };

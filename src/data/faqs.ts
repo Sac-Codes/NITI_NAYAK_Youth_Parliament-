@@ -9,60 +9,72 @@ export const faqsData: FAQItem[] = [
     category: "General",
     question: "What is NITI NAYAK Youth Summit 2026?",
     answer:
-      "NITI NAYAK Youth Summit 2026 is a national-level youth parliament and policy summit dedicated to empowering young leaders, debaters, and thinkers. Organised in collaboration with the Discussion and Debating Society, Faculty of Law, it brings together young minds to debate public policy, governance, artificial intelligence, human rights, and diplomacy.",
+      "NITI NAYAK Youth Summit 2026 is a premier national platform designed to empower the next generation of leaders, policymakers, diplomats, innovators, and changemakers. Organised in collaboration with the Discussion and Debating Society, Faculty of Law, it brings together students from schools, colleges, and universities across India to engage in high-level policy deliberations, leadership simulations, and diplomatic debate.",
   },
   {
     category: "General",
     question: "When and where is the summit being held?",
     answer:
-      "The summit will take place on 9–10 October 2026. The venue details are currently To Be Announced by the organisers.",
+      "The summit will take place on 1st–2nd November 2026. The venue details will be officially notified by the Organising Secretariat once campus arrangements are finalized.",
   },
   {
     category: "General",
-    question: "Who can participate in the summit?",
+    question: "Who can participate in NITI NAYAK 2026?",
     answer:
-      "Participation is open to school students, university undergraduates, law students, debaters, and MUN enthusiasts across India. Note that certain committees (UNCSW and Jan Manch) are reserved strictly for School Delegates Only.",
+      "Participation is open to school students, college and university undergraduates, postgraduates, debaters, and MUN enthusiasts across the country. All five featured committees are open to registered delegates.",
   },
   {
     category: "Committees",
     question: "What committees are featured at NITI NAYAK 2026?",
     answer:
-      "The summit features seven distinct forums: Lok Sabha, AIPPM, UPLA, UPLA — AI, UNHRC, UNCSW (School Only), and Jan Manch (School Only).",
+      "The 2026 edition features five specialized simulation forums: 1) All India Political Parties Meet (IPPM), 2) Lok Sabha, 3) United Nations Commission on the Status of Women (UNCSW), 4) United Nations Human Rights Council (UNHRC), and 5) Mahabharat.",
   },
   {
     category: "Committees",
-    question: "Who can participate in UNCSW and Jan Manch?",
+    question: "What are the official agendas for the committees?",
     answer:
-      "UNCSW (Advancing Gender Equality in the Digital Age) and Jan Manch (Is India's Education System Preparing Youth for the Next Decade?) are exclusively reserved for School Delegates Only.",
+      "The agendas are: IPPM — Global impact of India's foreign policies in light of recent civilian protests ongoing in India; Lok Sabha — Constitutional provisions of Emergency (Article 356) and scope of misusing constitutional and statutory institutional machinery; UNCSW — Deliberation on the issue of Female Genital Mutilation; UNHRC — Deliberation on the protection of human rights in conflict zones; and Mahabharat — The Battle Between Truth and Falsehood: Duty, Rights, and Justice.",
   },
   {
     category: "Delegation",
-    question: "What is the requirement for Best Delegation?",
+    question: "What are the eligibility requirements for the Best Delegation Award?",
     answer:
-      "A delegation must have a minimum of 8 delegates to qualify for the Best Delegation Award. This rule applies equally to both Institutional delegations and School delegations.",
+      "To qualify for consideration for the Best Delegation Award, a delegation must comprise a minimum of 8 registered delegates participating across the summit. This requirement applies uniformly to both institutional delegations and school delegations.",
   },
   {
     category: "Delegation",
-    question: "How is the Best Delegation score calculated?",
+    question: "How is the Best Delegation score calculated and ties broken?",
     answer:
-      "Points are aggregated based on individual committee awards: Best Delegate (10 pts), High Commendation (8 pts), Special Mention (5 pts), and International Press awards for Best Caricaturist, Reporter, and Photographer (5 pts each). Tie-breakers are resolved first by number of Honourable Mentions, then by Verbal awards.",
+      "The Best Delegation score is calculated by the cumulative points secured by all eligible delegates representing that delegation. Points: Best Delegate (10 pts), High Commendation (8 pts), Special Mention (5 pts), and International Press awards for Best Reporter, Best Photographer, and Best Caricaturist (5 pts each). In case of a tie, the tie-breaking sequence is: 1) More High Commendations, 2) More Special Mentions, 3) More Verbal Mentions awarded by Executive Boards. If the tie persists, the decision of the Conference Secretariat is final and binding.",
+  },
+  {
+    category: "Delegation",
+    question: "What is the Head Delegate's responsibility?",
+    answer:
+      "Each delegation must nominate a Head Delegate who is expected to remain present throughout the entire two-day conference. The Head Delegate serves as the primary liaison between the delegation and the Secretariat for all official communication, coordination, and administrative matters.",
   },
   {
     category: "Registration",
-    question: "Are portfolio fees refundable?",
+    question: "What are the registration fees for delegates?",
     answer:
-      "No. As per the official Delegation Policy, once a portfolio is reserved, the fee is strictly NON-REFUNDABLE and NON-TRANSFERABLE under any circumstances.",
+      "Early Bird rates for School & College delegates are ₹999 per delegate for UN & Indian Committees, and ₹799 per delegate for International Press (IP). For BHU Students (Special Category), the fee is ₹899 for UN & Indian Committees, and ₹749 for International Press (IP).",
   },
   {
     category: "Registration",
-    question: "What are the student fees?",
+    question: "Is accommodation available and what does the package include?",
     answer:
-      "School / College delegates in UN & Indian Committees pay ₹1,099 per delegate, while International Press delegates pay ₹999. BHU students pay ₹999 in UN & Indian Committees and ₹799 in International Press. Accommodation is ₹3,000 per participant.",
+      "Yes, an accommodation package is available at ₹3,000 per participant. This package is inclusive of conference registration, accommodation for the conference duration, and associated hospitality benefits.",
+  },
+  {
+    category: "Registration",
+    question: "What is the refund and portfolio alteration policy?",
+    answer:
+      "Once a portfolio has been allotted and the registration fee has been paid, registration is deemed final. Registration fees are strictly non-refundable and non-transferable under any circumstances, except where otherwise determined by the Conference Secretariat. Requests for changes to delegate names, committees, or portfolios after confirmation shall ordinarily not be entertained.",
   },
   {
     category: "Registration",
     question: "How can I contact the Secretariat for inquiries?",
     answer:
-      "You can contact Arush Kumar Singh (Founder President, +91 63879 70508), Suyash Pandey (Core Member, +91 92771 17310), or Ishan Agrawal (Core Member, +91 70815 69808).",
+      "You can contact Arush Kumar Singh (Founder President, +91 6387970508), Suryansh Singh (+91 91408 63986), or Riya Singh (+91 87566 13364). You can also follow our official Instagram handle @NITINAYAK_YS.",
   },
 ];

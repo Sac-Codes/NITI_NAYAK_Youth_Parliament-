@@ -101,9 +101,16 @@ export const Countdown: React.FC = () => {
           </div>
         )}
 
-        <div className="mt-8 flex items-center justify-center gap-2 text-xs font-sans-ui text-[#F2EBDD]/60">
-          <Calendar className="w-3.5 h-3.5 text-[#C8A45D]" />
-          <span>Official Event Date: 9–10 October 2026</span>
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 text-xs font-sans-ui text-[#F2EBDD]/60">
+          <span className="flex items-center gap-1.5">
+            <Calendar className="w-3.5 h-3.5 text-[#C8A45D]" />
+            <span>Day 1: <strong className="text-[#F2EBDD]/80">1st November 2026</strong></span>
+          </span>
+          <span className="hidden sm:block text-[#C8A45D]/40">•</span>
+          <span className="flex items-center gap-1.5">
+            <Calendar className="w-3.5 h-3.5 text-[#C8A45D]" />
+            <span>Day 2: <strong className="text-[#F2EBDD]/80">2nd November 2026</strong></span>
+          </span>
         </div>
       </div>
     </section>

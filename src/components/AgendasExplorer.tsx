@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { agendasData } from "../data/agendas";
-import { HelpCircle, FileCheck } from "lucide-react";
+import { HelpCircle, FileCheck, Landmark } from "lucide-react";
 
 export const AgendasExplorer: React.FC = () => {
   const [selectedAgendaId, setSelectedAgendaId] = useState<string>(agendasData[0].id);
@@ -12,14 +12,14 @@ export const AgendasExplorer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-xs font-sans-ui font-bold tracking-[0.3em] text-[#C8A45D] uppercase mb-2 block">
-            DELEGATE RESEARCH MATRIX
+          <span className="text-xs font-sans-ui font-bold tracking-[0.3em] text-[#C8A45D] uppercase mb-2 block flex items-center justify-center gap-2">
+            <Landmark className="w-4 h-4" /> DELEGATE RESEARCH MATRIX
           </span>
           <h2 className="font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2EBDD]">
             THE AGENDAS
           </h2>
-          <p className="font-serif-editorial text-lg italic text-[#D8C8A8] mt-2">
-            Questions that demand more than answers.
+          <p className="font-serif-editorial text-lg italic text-[#D8C8A8] mt-2 max-w-2xl mx-auto">
+            Nuanced policy themes, statutory provisions, and foundational questions across all five forums.
           </p>
           <div className="w-20 h-[2px] bg-[#C8A45D] mx-auto mt-4" />
         </div>
@@ -32,7 +32,7 @@ export const AgendasExplorer: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => setSelectedAgendaId(item.id)}
-                className={`px-5 py-3 rounded-t text-xs font-sans-ui font-bold tracking-wider whitespace-nowrap transition-all duration-300 ${
+                className={`px-5 py-3 rounded-t text-xs font-sans-ui font-bold tracking-wider whitespace-nowrap transition-all duration-300 cursor-pointer ${
                   isSelected
                     ? "bg-[#080B16] text-[#C8A45D] border-t-2 border-[#C8A45D] border-x border-[#C8A45D]/30"
                     : "text-[#F2EBDD]/60 hover:text-[#F2EBDD] bg-[#10162B]/50"
@@ -45,7 +45,7 @@ export const AgendasExplorer: React.FC = () => {
         </div>
 
         {/* Selected Agenda Detail View */}
-        <div className="bg-[#080B16] border border-[#C8A45D]/30 rounded-lg p-8 lg:p-12 shadow-2xl relative">
+        <div className="bg-[#080B16] border border-[#C8A45D]/30 rounded-xl p-8 lg:p-12 shadow-2xl relative">
           {/* Metadata Bar */}
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#C8A45D]/20 pb-6 mb-8">
             <div className="flex items-center gap-3">
@@ -69,7 +69,7 @@ export const AgendasExplorer: React.FC = () => {
           </div>
 
           {/* Agenda Title */}
-          <h3 className="font-serif-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F2EBDD] leading-tight mb-8">
+          <h3 className="font-serif-editorial text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F2EBDD] leading-snug mb-8">
             "{activeAgenda.title}"
           </h3>
 
@@ -83,7 +83,7 @@ export const AgendasExplorer: React.FC = () => {
               {activeAgenda.keyQuestions.map((q, qIdx) => (
                 <div
                   key={qIdx}
-                  className="p-6 rounded bg-[#10162B] border border-[#C8A45D]/20 relative flex flex-col justify-between"
+                  className="p-6 rounded-lg bg-[#10162B] border border-[#C8A45D]/20 relative flex flex-col justify-between"
                 >
                   <span className="font-serif-editorial text-3xl font-bold text-[#C8A45D]/30 mb-3">
                     Q0{qIdx + 1}
@@ -97,7 +97,7 @@ export const AgendasExplorer: React.FC = () => {
           </div>
 
           {/* Expected Policy Outcome */}
-          <div className="p-6 rounded bg-[#10162B]/80 border-l-4 border-[#A9432B] flex items-start gap-4">
+          <div className="p-6 rounded-lg bg-[#10162B]/80 border-l-4 border-[#A9432B] flex items-start gap-4">
             <FileCheck className="w-6 h-6 text-[#A9432B] shrink-0 mt-0.5" />
             <div>
               <h5 className="text-xs font-sans-ui font-bold tracking-widest text-[#A9432B] uppercase mb-1">

@@ -9,10 +9,10 @@ export const ScoringSystem: React.FC = () => {
   const [hcCount, setHcCount] = useState(0);
   const [smCount, setSmCount] = useState(0);
   const [ipCount, setIpCount] = useState(0);
-  const [delegateCount, setDelegateCount] = useState(10);
+  const [delegateCount, setDelegateCount] = useState(8);
 
   const totalScore = bdCount * 10 + hcCount * 8 + smCount * 5 + ipCount * 5;
-  const isEligible = delegateCount >= 10;
+  const isEligible = delegateCount >= 8;
 
   const triggerConfetti = () => {
     confetti({
@@ -34,6 +34,9 @@ export const ScoringSystem: React.FC = () => {
           <h2 className="font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2EBDD]">
             THE RACE FOR BEST DELEGATION
           </h2>
+          <p className="font-serif-editorial text-lg italic text-[#D8C8A8] mt-2 max-w-2xl">
+            Highest institutional honour recognising collective preparation, diplomacy, and leadership.
+          </p>
           <div className="w-24 h-[2px] bg-[#C8A45D] mt-4" />
         </div>
 
@@ -44,13 +47,16 @@ export const ScoringSystem: React.FC = () => {
             {/* Points Table */}
             <div className="p-6 rounded-lg bg-[#080B16] border border-[#C8A45D]/30 shadow-xl">
               <h3 className="font-serif-editorial text-2xl font-bold text-[#F2EBDD] mb-4 flex items-center gap-2">
-                <Trophy className="w-5 h-5 text-[#C8A45D]" /> AGGREGATE POINT WEIGHTAGE
+                <Trophy className="w-5 h-5 text-[#C8A45D]" /> OFFICIAL MARKING SCHEME
               </h3>
 
               <div className="divide-y divide-[#C8A45D]/15">
                 {scoringSystemData.points.map((p, idx) => (
                   <div key={idx} className="py-3 flex items-center justify-between font-sans-ui text-sm">
-                    <span className="text-[#F2EBDD]/90 font-medium">{p.award}</span>
+                    <div>
+                      <span className="text-[#F2EBDD]/90 font-medium block">{p.award}</span>
+                      <span className="text-[10px] text-[#D8C8A8]/60">{p.note}</span>
+                    </div>
                     <span className="font-serif-editorial font-bold text-lg text-[#C8A45D]">
                       {p.points} PTS
                     </span>
@@ -68,10 +74,10 @@ export const ScoringSystem: React.FC = () => {
                 </span>
               </div>
               <p className="font-serif-editorial text-xl font-bold text-[#F2EBDD] mb-2">
-                MINIMUM 8 DELEGATES REQUIRED
+                MINIMUM 8 REGISTERED DELEGATES
               </p>
               <p className="font-sans-ui text-xs text-[#F2EBDD]/80 leading-relaxed">
-                A delegation must have a minimum of <strong>8 delegates</strong> registered and participating across committees to qualify for the Best Delegation Award. This applies to both Institutional and School delegations.
+                {scoringSystemData.requirement}
               </p>
             </div>
 
@@ -95,7 +101,7 @@ export const ScoringSystem: React.FC = () => {
                 <div className="flex items-center gap-2 text-[#C8A45D]">
                   <Calculator className="w-5 h-5" />
                   <span className="text-xs font-sans-ui font-bold tracking-widest uppercase">
-                    DELEGATION SCORE CALCULATOR DEMO
+                    DELEGATION SCORE CALCULATOR
                   </span>
                 </div>
                 <span className="text-[10px] font-sans-ui px-2 py-0.5 rounded bg-[#C8A45D]/20 text-[#C8A45D]">
@@ -110,7 +116,7 @@ export const ScoringSystem: React.FC = () => {
                   <div className="flex justify-between text-xs font-sans-ui mb-1">
                     <span className="text-[#F2EBDD]/80 font-medium">Total Registered Delegates:</span>
                     <span className={`font-bold ${isEligible ? "text-emerald-400" : "text-[#A9432B]"}`}>
-                      {delegateCount} Delegates {isEligible ? "(QUALIFIED)" : "(NEEDS 10+)"}
+                      {delegateCount} Delegates {isEligible ? "(QUALIFIED)" : "(NEEDS 8+)"}
                     </span>
                   </div>
                   <input
@@ -188,7 +194,7 @@ export const ScoringSystem: React.FC = () => {
 
                 {!isEligible && (
                   <p className="text-xs text-[#A9432B] font-semibold mt-2">
-                    ⚠️ Warning: Minimum 8 delegates required to enter final tally.
+                    ⚠️ Minimum 8 delegates required to enter final tally.
                   </p>
                 )}
 

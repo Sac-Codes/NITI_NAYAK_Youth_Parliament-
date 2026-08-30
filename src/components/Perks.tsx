@@ -12,7 +12,7 @@ export const Perks: React.FC = () => {
       isTba: true,
     },
     {
-      title: "INSTITUTIONAL COLLABORATION",
+      title: "ACADEMIC COLLABORATION",
       detail: "Faculty of Law Collaboration",
       description: eventConfig.collaboration + ", ensuring rigorous procedure, academic depth, and legal standards.",
       icon: Landmark,
@@ -20,36 +20,36 @@ export const Perks: React.FC = () => {
     },
     {
       title: "EMINENT DIGNITARIES",
-      detail: "Political Leaders & Academicians",
-      description: "Interactions with prominent political figures, university professors, academicians, and public intellectuals.",
+      detail: "Policymakers & Scholars",
+      description: "Interactions with prominent leaders, university professors, academicians, and public policy practitioners.",
       icon: Users,
       isTba: false,
     },
     {
       title: "OFFICIAL CERTIFICATION",
       detail: "Signed Official Certificates",
-      description: "Prestigious certificates of merit and participation signed by eminent professors and political dignitaries.",
+      description: "Prestigious certificates of merit and participation signed by eminent professors and distinguished dignitaries.",
       icon: FileBadge,
       isTba: false,
     },
     {
-      title: "CASH PRIZES & AWARDS",
-      detail: "Recognition & Trophies",
-      description: "Substantial cash prizes, trophies, and formal commendations awarded to outstanding delegates and delegations.",
+      title: "BEST DELEGATION HONOURS",
+      detail: "Trophies & Commendations",
+      description: "Highest institutional honours and formal committee awards celebrating debate, research, and diplomatic leadership.",
       icon: Award,
       isTba: false,
     },
     {
       title: "NATIONAL NETWORKING",
-      detail: "Debaters & Youth Leaders",
-      description: "Forge lasting connections with law students, MUN veterans, student leaders, and aspiring policy analysts nationwide.",
+      detail: "Schools & Universities Nationwide",
+      description: "Forge lasting connections with law students, MUN debaters, student leaders, and aspiring policy analysts.",
       icon: Network,
       isTba: false,
     },
     {
-      title: "SKILL DEVELOPMENT",
+      title: "21ST-CENTURY SKILLS",
       detail: "Policy & Rhetoric Mastery",
-      description: "Master legal reasoning, public speaking, diplomatic negotiation, and complex policy drafting.",
+      description: "Master evidence-based reasoning, public speaking, negotiation, diplomacy, and crisis management.",
       icon: TrendingUp,
       isTba: false,
     },
@@ -66,6 +66,9 @@ export const Perks: React.FC = () => {
           <h2 className="font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2EBDD]">
             MORE THAN A CONFERENCE
           </h2>
+          <p className="font-serif-editorial text-lg italic text-[#D8C8A8] mt-2 max-w-2xl">
+            {eventConfig.dates} • {eventConfig.tagline}
+          </p>
           <div className="w-24 h-[2px] bg-[#C8A45D] mt-4" />
         </div>
 
@@ -76,7 +79,7 @@ export const Perks: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="p-8 rounded-lg bg-[#080B16] border border-[#C8A45D]/20 hover:border-[#C8A45D] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-lg"
+                className="p-8 rounded-xl bg-[#080B16] border border-[#C8A45D]/20 hover:border-[#C8A45D] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">

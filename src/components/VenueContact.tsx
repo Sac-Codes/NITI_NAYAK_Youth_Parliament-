@@ -3,6 +3,14 @@ import { secretariatMembers } from "../data/leadership";
 import { eventConfig } from "../data/config";
 import { MapPin, Phone, MessageSquare, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
+const InstagramIcon: React.FC<{ className?: string }> = ({ className = "w-4 h-4" }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
 export const VenueContact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -61,10 +69,13 @@ export const VenueContact: React.FC = () => {
             <h2 className="font-serif-editorial text-4xl sm:text-5xl font-bold text-[#F2EBDD]">
               THE VENUE
             </h2>
+            <p className="font-serif-editorial text-lg italic text-[#D8C8A8] mt-2">
+              Official Conference Dates: {eventConfig.dates}
+            </p>
             <div className="w-20 h-[2px] bg-[#C8A45D] mt-3" />
           </div>
 
-          <div className="max-w-3xl mx-auto p-8 sm:p-12 rounded-lg bg-[#10162B] border-2 border-[#C8A45D]/40 text-center shadow-2xl space-y-4">
+          <div className="max-w-3xl mx-auto p-8 sm:p-12 rounded-xl bg-[#10162B] border-2 border-[#C8A45D]/40 text-center shadow-2xl space-y-4">
             <div className="w-14 h-14 rounded-full bg-[#080B16] border border-[#C8A45D] flex items-center justify-center text-[#C8A45D] mx-auto">
               <MapPin className="w-7 h-7" />
             </div>
@@ -78,7 +89,7 @@ export const VenueContact: React.FC = () => {
             </h3>
 
             <p className="font-sans-ui text-xs sm:text-sm text-[#F2EBDD]/70 max-w-xl mx-auto leading-relaxed">
-              Official campus auditorium and parliamentary hall arrangements are currently being finalized by the Secretariat. Confirmed venue directions and accommodation guidelines will be notified to registered delegates.
+              Auditorium and committee hall arrangements are currently being finalized by the Secretariat. Confirmed directions, transport assistance, and accommodation guidelines will be notified directly to registered delegates.
             </p>
           </div>
         </div>
@@ -101,14 +112,19 @@ export const VenueContact: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left: Contact Cards */}
             <div className="lg:col-span-5 space-y-6">
-              <h3 className="text-xs font-sans-ui font-bold tracking-widest text-[#C8A45D] uppercase border-b border-[#C8A45D]/20 pb-3">
-                SECRETARIAT CONTACT HOTLINES
-              </h3>
+              <div className="flex items-center justify-between border-b border-[#C8A45D]/20 pb-3">
+                <h3 className="text-xs font-sans-ui font-bold tracking-widest text-[#C8A45D] uppercase">
+                  SECRETARIAT HOTLINES
+                </h3>
+                <span className="text-xs font-sans-ui text-[#D8C8A8] flex items-center gap-1">
+                  <InstagramIcon className="w-3.5 h-3.5 text-[#C8A45D]" /> {eventConfig.socialHandle}
+                </span>
+              </div>
 
               {secretariatMembers.map((member, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-lg bg-[#10162B] border border-[#C8A45D]/25 hover:border-[#C8A45D] transition-colors"
+                  className="p-5 rounded-xl bg-[#10162B] border border-[#C8A45D]/25 hover:border-[#C8A45D] transition-colors shadow-lg"
                 >
                   <span className="text-[10px] font-sans-ui font-bold text-[#C8A45D] uppercase block mb-1">
                     {member.role}
@@ -119,10 +135,10 @@ export const VenueContact: React.FC = () => {
 
                   <div className="flex items-center gap-3">
                     <a
-                      href={`tel:${member.phone.replace(/\s+/g, "")}`}
+                      href={`tel:${member.phone.replace(/[^0-9+]/g, "")}`}
                       className="px-3 py-1.5 rounded bg-[#080B16] border border-[#C8A45D]/30 text-xs font-sans-ui text-[#F2EBDD] hover:text-[#C8A45D] flex items-center gap-1.5 transition-colors"
                     >
-                      <Phone className="w-3.5 h-3.5 text-[#C8A45D]" /> Call
+                      <Phone className="w-3.5 h-3.5 text-[#C8A45D]" /> Call: {member.phone}
                     </a>
 
                     <a
@@ -130,6 +146,7 @@ export const VenueContact: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3 py-1.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-xs font-sans-ui text-emerald-400 hover:bg-emerald-500/20 flex items-center gap-1.5 transition-colors"
+                      aria-label={`WhatsApp ${member.name}`}
                     >
                       <MessageSquare className="w-3.5 h-3.5" /> WhatsApp
                     </a>
@@ -142,7 +159,7 @@ export const VenueContact: React.FC = () => {
             <div className="lg:col-span-7">
               <form
                 onSubmit={handleSubmit}
-                className="p-8 rounded-lg bg-[#10162B] border border-[#C8A45D]/30 shadow-2xl space-y-5"
+                className="p-8 rounded-xl bg-[#10162B] border border-[#C8A45D]/30 shadow-2xl space-y-5"
               >
                 <h3 className="text-xs font-sans-ui font-bold tracking-widest text-[#C8A45D] uppercase border-b border-[#C8A45D]/20 pb-3 mb-6">
                   SEND AN OFFICIAL INQUIRY
@@ -245,7 +262,7 @@ export const VenueContact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="w-full py-3 rounded text-xs font-sans-ui font-bold tracking-widest text-[#080B16] bg-[#C8A45D] hover:bg-[#D8C8A8] transition-colors flex items-center justify-center gap-2"
+                  className="w-full py-3 rounded text-xs font-sans-ui font-bold tracking-widest text-[#080B16] bg-[#C8A45D] hover:bg-[#D8C8A8] transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
                   {status === "submitting" ? (
                     <>

@@ -14,11 +14,14 @@ export const DelegationPolicy: React.FC = () => {
           <h2 className="font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold text-[#242424]">
             DELEGATION POLICY
           </h2>
+          <p className="font-serif-editorial text-lg italic text-[#242424]/80 mt-2 max-w-2xl">
+            Governing rules for institutional, school, and individual delegations.
+          </p>
           <div className="w-24 h-[2px] bg-[#A9432B] mt-4" />
         </div>
 
         {/* Policy Document Box */}
-        <div className="p-8 lg:p-12 bg-[#D8C8A8]/30 border border-[#242424]/20 rounded-lg shadow-xl relative editorial-border">
+        <div className="p-8 lg:p-12 bg-[#D8C8A8]/30 border border-[#242424]/20 rounded-xl shadow-xl relative editorial-border">
           <div className="flex items-center gap-3 border-b border-[#242424]/15 pb-4 mb-8">
             <FileText className="w-6 h-6 text-[#A9432B]" />
             <div>
@@ -26,16 +29,16 @@ export const DelegationPolicy: React.FC = () => {
                 CONFERENCE DELEGATION STATUTES
               </h3>
               <p className="font-sans-ui text-xs text-[#242424]/70">
-                Governing rules for institutional and school delegation portfolios
+                Authoritative terms issued by the Conference Secretariat, NITI NAYAK Youth Summit 2026
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {delegationPolicyRules.map((rule, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded bg-[#F2EBDD] border border-[#242424]/15 flex flex-col justify-between"
+                className="p-6 rounded-lg bg-[#F2EBDD] border border-[#242424]/15 flex flex-col justify-between shadow-sm"
               >
                 <div>
                   <div className="flex items-center gap-2 mb-3">
@@ -53,7 +56,7 @@ export const DelegationPolicy: React.FC = () => {
           </div>
 
           <div className="mt-8 pt-6 border-t border-[#242424]/15 text-center font-serif-editorial text-sm text-[#242424]/80 italic">
-            "Strict compliance with conference regulations ensures a fair, dignified, and intellectually rigorous summit."
+            "Strict compliance with conference regulations ensures an equitable, dignified, and intellectually rigorous summit."
           </div>
         </div>
       </div>

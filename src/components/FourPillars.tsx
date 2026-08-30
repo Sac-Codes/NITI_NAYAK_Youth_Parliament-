@@ -6,29 +6,29 @@ export const FourPillars: React.FC = () => {
     {
       num: "01",
       title: "IDEAS",
-      subtitle: "Challenge assumptions. Explore possibilities.",
-      description: "Intellectual courage to question status-quo policies and conceptualize groundbreaking solutions for society.",
+      subtitle: "Ideas that challenge the ordinary.",
+      description: "Intellectual courage to question conventional assumptions, explore bold possibilities, and conceptualize transformative solutions for society.",
       icon: Lightbulb,
     },
     {
       num: "02",
       title: "LEADERSHIP",
-      subtitle: "Lead with responsibility and purpose.",
-      description: "Cultivating legal acumen, ethical decision-making, and consensus building in times of technological shift.",
+      subtitle: "Leadership that inspires responsibility.",
+      description: "Cultivating ethical decision-making, empathy, integrity, and the conviction to guide communities with purpose and accountability.",
       icon: Compass,
     },
     {
       num: "03",
       title: "DEBATE",
-      subtitle: "Question. Defend. Deliberate.",
-      description: "Mastering parliamentary procedure, diplomatic rhetoric, and evidentiary rebuttal under intense scrutiny.",
+      subtitle: "Debate that creates understanding.",
+      description: "Mastering parliamentary procedure, evidentiary reasoning, and constructive contestation to synthesize divergent perspectives into common ground.",
       icon: MessagesSquare,
     },
     {
       num: "04",
       title: "IMPACT",
-      subtitle: "Turn dialogue into meaningful action.",
-      description: "Transforming resolutions and policy papers into actionable initiatives that influence youth governance.",
+      subtitle: "Impact that transforms ideas into action.",
+      description: "Bridging the gap between rhetoric and tangible change, transforming resolutions and policy papers into actionable initiatives for national progress.",
       icon: Target,
     },
   ];
@@ -39,11 +39,14 @@ export const FourPillars: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-xs font-sans-ui font-bold tracking-[0.3em] text-[#C8A45D] uppercase mb-2 block">
-            CORE FOUNDATIONAL VALUES
+            CORE PHILOSOPHY & VALUES
           </span>
           <h2 className="font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2EBDD]">
             THE FOUR PILLARS
           </h2>
+          <p className="font-serif-editorial text-lg italic text-[#D8C8A8] mt-2 max-w-2xl mx-auto">
+            Ideas • Leadership • Debate • Impact
+          </p>
           <div className="w-24 h-[2px] bg-[#C8A45D] mx-auto mt-4" />
         </div>
 
@@ -75,8 +78,8 @@ export const FourPillars: React.FC = () => {
                     {pillar.title}
                   </h3>
 
-                  <p className="font-sans-ui text-xs font-semibold text-[#D8C8A8] mb-4">
-                    {pillar.subtitle}
+                  <p className="font-serif-editorial text-sm italic text-[#D8C8A8] mb-4">
+                    "{pillar.subtitle}"
                   </p>
 
                   <p className="font-sans-ui text-xs text-[#F2EBDD]/70 leading-relaxed">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { eventConfig } from "../data/config";
 import { ArrowRight } from "lucide-react";
 
@@ -34,20 +35,21 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onRegisterClick }) => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <button
+          <Link
+            to="/registration"
             onClick={onRegisterClick}
-            className="w-full sm:w-auto px-10 py-4 rounded text-xs font-sans-ui font-bold tracking-[0.2em] text-[#080B16] bg-gradient-to-r from-[#C8A45D] via-[#D8C8A8] to-[#C8A45D] hover:shadow-xl hover:shadow-[#C8A45D]/25 transition-all duration-300 flex items-center justify-center gap-2 group active:scale-95"
+            className="w-full sm:w-auto px-10 py-4 rounded text-xs font-sans-ui font-bold tracking-[0.2em] text-[#080B16] bg-gradient-to-r from-[#C8A45D] via-[#D8C8A8] to-[#C8A45D] hover:shadow-xl hover:shadow-[#C8A45D]/25 transition-all duration-300 flex items-center justify-center gap-2 group active:scale-95 cursor-pointer"
           >
             <span>REGISTER NOW</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
 
-          <a
-            href="/committees"
+          <Link
+            to="/committees"
             className="w-full sm:w-auto px-8 py-4 rounded text-xs font-sans-ui font-semibold tracking-[0.2em] text-[#F2EBDD] border border-[#C8A45D]/40 bg-[#10162B]/80 hover:bg-[#10162B] hover:border-[#C8A45D] transition-colors"
           >
             EXPLORE COMMITTEES
-          </a>
+          </Link>
         </div>
       </div>
     </section>

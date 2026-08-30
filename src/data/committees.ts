@@ -3,7 +3,7 @@ export interface Committee {
   name: string;
   fullName: string;
   eligibility: "Open to All" | "School Delegates Only";
-  category: "Indian Parliamentary / Executive" | "International Forum" | "State Forum" | "Youth Forum";
+  category: "Indian Parliamentary / Executive" | "International Forum" | "Special Simulation";
   agenda: string;
   focusAreas: string[];
   description: string;
@@ -13,83 +13,63 @@ export interface Committee {
 
 export const committeesData: Committee[] = [
   {
+    id: "ippm",
+    name: "IPPM",
+    fullName: "All India Political Parties Meet",
+    eligibility: "Open to All",
+    category: "Indian Parliamentary / Executive",
+    agenda: "Discussing the global impact of India's foreign policies in light of recent civilian protests ongoing in India.",
+    focusAreas: [
+      "Foreign Policy & International Diplomatic Repercussions",
+      "Civilian Protests & Constitutional Freedom of Expression",
+      "National Security & Global Perception Management",
+      "Cross-Party Strategic Consensus on Geopolitics",
+      "Democratic Governance & Diplomatic Immunity",
+    ],
+    description:
+      "A premier political forum gathering representatives across India's political spectrum. Delegates analyze the international ramifications of domestic civil movements, evaluating how foreign bilateral relationships and international diplomacy intersect with domestic public dissent.",
+    whyItMatters:
+      "In an interconnected world, domestic political developments and civilian movements directly influence foreign relations, strategic alliances, and national stature on the global stage.",
+    awards: ["Best Delegate", "High Commendation", "Special Mention"],
+  },
+  {
     id: "lok-sabha",
     name: "LOK SABHA",
     fullName: "House of the People — Lok Sabha",
     eligibility: "Open to All",
     category: "Indian Parliamentary / Executive",
-    agenda: "Regulation of Artificial Intelligence in India",
+    agenda: "Deliberation upon constitutional provisions of Emergency (Article 356) and scope of misusing constitutional and statutory institutional machinery.",
     focusAreas: [
-      "Governance & Regulatory Frameworks",
-      "Employment & Workforce Displacement",
-      "National Security & Defense Systems",
-      "Innovation & Technology Ecosystems",
-      "Fundamental Rights & Citizen Protection",
+      "Constitutional Framework of Article 356 & State Emergency",
+      "Federalism, Centre-State Balance & State Autonomy",
+      "Judicial Review & Supreme Court Jurisprudence (S.R. Bommai Precedent)",
+      "Misuse of Statutory & Central Institutional Machinery",
+      "Legislative Safeguards for Democratic Decentralization",
     ],
     description:
-      "The Lok Sabha serves as the premier legislative chamber of the Republic of India. Delegates will debate legislative mechanisms to regulate emerging artificial intelligence technologies while balancing innovation, economic growth, national security, and constitutional freedoms.",
+      "The primary legislative chamber of the Republic of India. Delegates deliberate on high-stakes constitutional law, examining the scope, historical precedents, and contemporary safeguards regarding President's Rule and the integrity of democratic state machinery.",
     whyItMatters:
-      "As AI transforms Indian governance and economy, legislative clarity is urgent to prevent algorithmic bias, protect digital sovereignty, and safeguard fundamental rights under the Constitution.",
+      "Preserving federal equilibrium and preventing partisan overreach through constitutional machinery is foundational to upholding India's democratic fabric and constitutional morality.",
     awards: ["Best Delegate", "High Commendation", "Special Mention"],
   },
   {
-    id: "aippm",
-    name: "AIPPM",
-    fullName: "All India Parties Political Meet",
+    id: "uncsw",
+    name: "UNCSW",
+    fullName: "United Nations Commission on the Status of Women",
     eligibility: "Open to All",
-    category: "Indian Parliamentary / Executive",
-    agenda: "India's Strategic Response to the Age of Artificial Intelligence",
+    category: "International Forum",
+    agenda: "Deliberation on the issue of Female Genital Mutilation",
     focusAreas: [
-      "Cross-Party Policy Consensus",
-      "National Security & Cyber Resilience",
-      "Economic Competitiveness & AI Innovation",
-      "Employment Strategy & Reskilling",
-      "Digital Rights & Ethics",
+      "Universal Eradication of Female Genital Mutilation (FGM)",
+      "Bodily Autonomy & Fundamental Human Rights of Girls & Women",
+      "Cultural & Traditional Practices vs International Legal Standards",
+      "Healthcare Intervention, Psychological Support & Medical Trauma",
+      "Grassroots Community Engagement & Statutory Enforcement",
     ],
     description:
-      "A political forum gathering representatives across India's political spectrum to deliberate on high-stakes strategic responses to artificial intelligence, geopolitical tech competition, and national economic security.",
+      "The principal global intergovernmental body dedicated exclusively to the promotion of gender equality and the empowerment of women. Delegates formulate actionable resolutions to eradicate harmful traditional practices and protect bodily integrity worldwide.",
     whyItMatters:
-      "AIPPM offers a platform for raw political negotiation and strategy, demanding delegates synthesize ideological perspectives into national action plans.",
-    awards: ["Best Delegate", "High Commendation", "Special Mention"],
-  },
-  {
-    id: "upla",
-    name: "UPLA",
-    fullName: "Uttar Pradesh Legislative Assembly",
-    eligibility: "Open to All",
-    category: "State Forum",
-    agenda: "Transforming Uttar Pradesh into a One Trillion Dollar Economy",
-    focusAreas: [
-      "Industrial Growth & Investment Corridors",
-      "Employment Generation & Youth Upskilling",
-      "Infrastructure & Smart Logistics",
-      "Inclusive Rural & Urban Development",
-    ],
-    description:
-      "Focusing on the economic powerhouse of northern India, delegates in UPLA address fiscal policy, industrialization, agrarian modernization, and infrastructure reform to propel Uttar Pradesh toward its $1 Trillion GDP milestone.",
-    whyItMatters:
-      "Uttar Pradesh's economic transformation is central to India's national growth narrative, requiring bold state-level policy interventions.",
-    awards: ["Best Delegate", "High Commendation", "Special Mention"],
-  },
-  {
-    id: "upla-ai",
-    name: "UPLA — AI",
-    fullName: "Uttar Pradesh Legislative Assembly — Special AI Forum",
-    eligibility: "Open to All",
-    category: "State Forum",
-    agenda: "Adoption of Artificial Intelligence in Uttar Pradesh",
-    focusAreas: [
-      "Smart Governance & E-Service Delivery",
-      "Agritech & Rural Development",
-      "Healthcare Modernization & Telemedicine",
-      "Education & Digital Skill Infrastructure",
-      "Public Safety & Law Enforcement Tech",
-      "Employment Impact & Mitigation",
-    ],
-    description:
-      "A specialized forum dedicated strictly to state-level AI policy deployment across Uttar Pradesh. Preserving the exact terminology of the official brochure, this committee debates real-world governance, agriculture, healthcare, and educational AI integration.",
-    whyItMatters:
-      "State-level adoption of AI requires nuanced policy tailoring to address grassroots administrative challenges, digital literacy, and public service delivery.",
+      "Female Genital Mutilation violates basic human rights, bodily autonomy, and health, demanding coordinated global legal action, grassroots education, and medical rehabilitation frameworks.",
     awards: ["Best Delegate", "High Commendation", "Special Mention"],
   },
   {
@@ -98,56 +78,38 @@ export const committeesData: Committee[] = [
     fullName: "United Nations Human Rights Council",
     eligibility: "Open to All",
     category: "International Forum",
-    agenda: "Safeguarding Human Rights in the Age of Artificial Intelligence",
+    agenda: "Deliberation on the protection of human rights in conflict zones",
     focusAreas: [
-      "Algorithmic Bias & Discriminatory Systems",
-      "Mass Surveillance & Privacy Violations",
-      "Deepfakes, Misinformation & Freedom of Expression",
-      "Data Sovereignty & Digital Rights",
-      "Equitable Global Access to AI",
+      "Geneva Conventions & International Humanitarian Law (IHL)",
+      "Protection of Civilians, Healthcare Workers & Vulnerable Groups",
+      "Accountability & War Crimes Investigation Mechanisms",
+      "Humanitarian Corridors & Unimpeded Aid Delivery",
+      "Post-Conflict Rehabilitation, Reparations & Transitional Justice",
     ],
     description:
-      "The UN's principal body for human rights. Delegates analyze global digital governance through the international human rights charter, addressing state surveillance, algorithmic discrimination, and deepfake threats.",
+      "The United Nations' lead council for upholding human dignity and international conventions. Delegates confront active crises in conflict territories to enforce humanitarian law, investigate atrocities, and safeguard civilian populations.",
     whyItMatters:
-      "Unregulated AI poses existential challenges to human dignity, privacy, and democratic freedoms across global jurisdictions.",
+      "Contemporary conflicts increasingly endanger civilian lives and infrastructure, requiring urgent multilateral enforcement of human rights protections and humanitarian assistance.",
     awards: ["Best Delegate", "High Commendation", "Special Mention"],
   },
   {
-    id: "uncsw",
-    name: "UNCSW",
-    fullName: "United Nations Commission on the Status of Women",
-    eligibility: "School Delegates Only",
-    category: "International Forum",
-    agenda: "Advancing Gender Equality in the Digital Age",
+    id: "mahabharat",
+    name: "MAHABHARAT",
+    fullName: "Mahabharat — Historical & Mythological Simulation",
+    eligibility: "Open to All",
+    category: "Special Simulation",
+    agenda: "The Battle Between Truth and Falsehood: Duty, Rights, and Justice",
     focusAreas: [
-      "Gender Bias in Artificial Intelligence",
-      "Bridging the Digital Gender Divide",
-      "Online Safety & Prevention of Digital Harassment",
-      "Promoting Women's Leadership in STEM & Technology",
+      "Dharma vs Adharma: Navigating Moral Ambiguity & Ethics in Governance",
+      "The Concept of Rajdharma & Duty of the State toward Citizens",
+      "Individual Moral Rights vs Societal Order & Constitutional Obligations",
+      "Conflict Resolution, Diplomacy & Ethical Compromise in Times of Crisis",
+      "Philosophical Deliberation on Truth, Justice & Righteous Action",
     ],
     description:
-      "Exclusively for school delegates, UNCSW provides a specialized international arena to examine gender disparities in technology access, algorithmic bias, online safety, and female tech leadership.",
+      "A unique, immersive simulation based on the timeless philosophical epic. Delegates step into the roles of epic characters and statesmen to deliberate on timeless questions of duty (Dharma), individual rights, justice, statecraft, and the eternal struggle between truth and falsehood.",
     whyItMatters:
-      "Empowering young school debaters to tackle gender equity in tech fosters the next generation of inclusive global policymakers.",
-    awards: ["Best Delegate", "High Commendation", "Special Mention"],
-  },
-  {
-    id: "jan-manch",
-    name: "JAN MANCH",
-    fullName: "Jan Manch — People's Youth Forum",
-    eligibility: "School Delegates Only",
-    category: "Youth Forum",
-    agenda: "Is India's Education System Preparing Youth for the Next Decade?",
-    focusAreas: [
-      "Rote Learning vs. Practical Problem-Solving",
-      "Future-Ready Vocational & Digital Skills",
-      "Employability, Apprenticeships & Industry Readiness",
-      "Mental Health & Holistic Educational Reform",
-    ],
-    description:
-      "An open, high-energy youth debate platform reserved exclusively for school delegates to critique, re-imagine, and advocate for radical improvements in India's school and higher education ecosystem.",
-    whyItMatters:
-      "School students are the primary stakeholders of education reform. Jan Manch gives them a direct voice to evaluate whether current curricula meet 21st-century demands.",
+      "The Mahabharat provides profound civilizational wisdom and ethical dilemmas that mirror modern statecraft, demanding nuanced critical reasoning, moral clarity, and strategic eloquence.",
     awards: ["Best Delegate", "High Commendation", "Special Mention"],
   },
 ];

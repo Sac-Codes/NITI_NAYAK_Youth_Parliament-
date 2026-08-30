@@ -1,13 +1,13 @@
 import React from "react";
 import { founderMessage, secretariatMessage } from "../data/leadership";
-import { Quote, Feather } from "lucide-react";
+import { Quote, Feather, Award } from "lucide-react";
 
 export const Messages: React.FC = () => {
   return (
     <section className="py-24 bg-[#F2EBDD] text-[#242424] relative overflow-hidden theme-light-editorial border-t border-[#242424]/10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
         {/* Founder's Desk Message */}
-        <div className="p-8 lg:p-12 bg-[#D8C8A8]/40 border border-[#242424]/20 rounded-lg shadow-xl relative editorial-border">
+        <div className="p-8 lg:p-12 bg-[#D8C8A8]/40 border border-[#242424]/20 rounded-xl shadow-xl relative editorial-border">
           <div className="flex items-center gap-3 border-b border-[#242424]/15 pb-4 mb-8">
             <Feather className="w-6 h-6 text-[#A9432B]" />
             <div>
@@ -48,11 +48,12 @@ export const Messages: React.FC = () => {
         </div>
 
         {/* Secretariat Message */}
-        <div className="p-8 lg:p-12 bg-[#D8C8A8]/20 border border-[#242424]/15 rounded-lg shadow-lg relative">
-          <div className="flex items-center justify-between border-b border-[#242424]/15 pb-4 mb-8">
+        <div className="p-8 lg:p-12 bg-[#D8C8A8]/20 border border-[#242424]/15 rounded-xl shadow-lg relative">
+          <div className="flex items-center gap-3 border-b border-[#242424]/15 pb-4 mb-8">
+            <Award className="w-6 h-6 text-[#A9432B]" />
             <div>
               <span className="text-[10px] font-sans-ui font-bold tracking-[0.25em] text-[#A9432B] uppercase">
-                ORGANISING COMMITTEE ADDRESS
+                ORGANISING SECRETARIAT ADDRESS
               </span>
               <h2 className="font-serif-editorial text-3xl sm:text-4xl font-bold text-[#242424]">
                 {secretariatMessage.title}

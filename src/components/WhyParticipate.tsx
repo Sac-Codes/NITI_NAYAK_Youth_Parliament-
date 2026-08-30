@@ -1,37 +1,47 @@
 import React from "react";
-import { Brain, Mic, Globe, FileText, Award, Users } from "lucide-react";
+import { Landmark, Compass, Mic, AlertOctagon, BookOpen, Users, Award, Globe } from "lucide-react";
 
 export const WhyParticipate: React.FC = () => {
-  const benefits = [
+  const experiences = [
     {
-      title: "CRITICAL THINKING",
-      description: "Analyse complex real-world issues, evaluate opposing arguments, and synthesize balanced solutions under pressure.",
-      icon: Brain,
+      title: "Policy & Parliamentary Deliberations",
+      description: "Engage in authentic legislative and parliamentary simulations addressing real-world governance, constitutional law, and public policy challenges.",
+      icon: Landmark,
     },
     {
-      title: "PUBLIC SPEAKING",
-      description: "Build poise, articulate ideas persuasively, and command parliamentary rostrums with poise and confidence.",
+      title: "Leadership & Diplomacy Simulations",
+      description: "Develop 21st-century negotiation, strategic diplomacy, multilateral consensus building, and ethical statecraft under pressure.",
+      icon: Compass,
+    },
+    {
+      title: "Expert Talks & Interactive Sessions",
+      description: "Gain direct insights from seasoned policymakers, eminent legal scholars, professors, and distinguished political dignitaries.",
       icon: Mic,
     },
     {
-      title: "DIPLOMACY",
-      description: "Learn to negotiate, build cross-party coalitions, mediate disputes, and discover common ground in divided assemblies.",
-      icon: Globe,
+      title: "Crisis & Strategic Simulations",
+      description: "Navigate dynamic, unpredictable crisis scenarios requiring instant analysis, rapid collaboration, and decisive problem-solving.",
+      icon: AlertOctagon,
     },
     {
-      title: "POLICY ANALYSIS",
-      description: "Engage directly with real-world legislative drafting, constitutional law, economic models, and tech regulation.",
-      icon: FileText,
+      title: "Research, Debate & Public Speaking",
+      description: "Sharpen evidence-backed research, hone persuasive rhetoric, and master evidentiary cross-examination before discerning committees.",
+      icon: BookOpen,
     },
     {
-      title: "LEADERSHIP",
-      description: "Develop decisive problem-solving, strategic foresight, and organizational leadership capabilities.",
+      title: "Networking & Collaborative Learning",
+      description: "Connect with proactive student leaders, debaters, and future changemakers from leading schools, colleges, and universities across India.",
+      icon: Users,
+    },
+    {
+      title: "Recognition, Awards & Certification",
+      description: "Earn prestigious merit awards, aggregate delegation honors, and official certificates signed by eminent academicians and dignitaries.",
       icon: Award,
     },
     {
-      title: "NETWORKING",
-      description: "Connect with law students, debaters, MUN veterans, academicians, policy experts, and emerging youth leaders nationwide.",
-      icon: Users,
+      title: "Exposure to National & Global Issues",
+      description: "Deep-dive into crucial subject matters spanning international relations, constitutional emergency provisions, human rights, and social justice.",
+      icon: Globe,
     },
   ];
 
@@ -44,38 +54,45 @@ export const WhyParticipate: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <span className="text-xs font-sans-ui font-bold tracking-[0.3em] text-[#C8A45D] uppercase mb-2">
-            BENEFITS & OUTCOMES
+            THE SUMMIT EXPERIENCE
           </span>
           <h2 className="font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2EBDD]">
             WHY NITI NAYAK?
           </h2>
+          <p className="font-serif-editorial text-lg italic text-[#D8C8A8] mt-2 max-w-2xl">
+            Eight transformative dimensions of the 2026 youth conference experience.
+          </p>
           <div className="w-20 h-[2px] bg-[#C8A45D] mt-4" />
         </div>
 
-        {/* 6-Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((item, idx) => {
+        {/* 8-Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {experiences.map((item, idx) => {
             const IconComp = item.icon;
             return (
               <div
                 key={idx}
-                className="p-8 rounded bg-[#080B16] border border-[#C8A45D]/20 hover:border-[#C8A45D]/60 transition-all duration-300 group hover:-translate-y-1 shadow-lg flex flex-col justify-between"
+                className="p-6 rounded-xl bg-[#080B16] border border-[#C8A45D]/20 hover:border-[#C8A45D] transition-all duration-300 group hover:-translate-y-1.5 shadow-lg flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded bg-[#10162B] border border-[#C8A45D]/30 flex items-center justify-center text-[#C8A45D] mb-6 group-hover:scale-110 group-hover:border-[#C8A45D] transition-all">
+                  <div className="w-12 h-12 rounded bg-[#10162B] border border-[#C8A45D]/30 flex items-center justify-center text-[#C8A45D] mb-5 group-hover:scale-105 group-hover:border-[#C8A45D] group-hover:bg-[#C8A45D] group-hover:text-[#080B16] transition-all">
                     <IconComp className="w-6 h-6" />
                   </div>
 
-                  <h3 className="font-serif-editorial text-2xl font-bold text-[#F2EBDD] mb-3 group-hover:text-[#C8A45D] transition-colors">
+                  <span className="text-[10px] font-sans-ui font-bold tracking-widest text-[#C8A45D]/70 uppercase block mb-1">
+                    EXPERIENCE 0{idx + 1}
+                  </span>
+
+                  <h3 className="font-serif-editorial text-xl font-bold text-[#F2EBDD] mb-3 group-hover:text-[#C8A45D] transition-colors leading-snug">
                     {item.title}
                   </h3>
 
-                  <p className="font-sans-ui text-xs sm:text-sm text-[#F2EBDD]/75 leading-relaxed">
+                  <p className="font-sans-ui text-xs text-[#F2EBDD]/70 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#C8A45D]/10 flex items-center justify-between text-[11px] font-sans-ui text-[#C8A45D]">
+                <div className="mt-6 pt-3 border-t border-[#C8A45D]/10 flex items-center justify-between text-[10px] font-sans-ui text-[#C8A45D]">
                   <span className="tracking-widest uppercase">DIMENSION 0{idx + 1}</span>
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity">EXPLORE →</span>
                 </div>

@@ -15,9 +15,8 @@ export const Committees: React.FC<CommitteesProps> = ({ onRegisterClick }) => {
   const categories = [
     "ALL",
     "Indian Parliamentary / Executive",
-    "State Forum",
     "International Forum",
-    "Youth Forum",
+    "Special Simulation",
   ];
 
   const filteredCommittees =
@@ -40,7 +39,7 @@ export const Committees: React.FC<CommitteesProps> = ({ onRegisterClick }) => {
             ENTER THE COMMITTEES
           </h2>
           <p className="font-serif-editorial text-lg italic text-[#D8C8A8] mt-2 max-w-2xl">
-            Seven forums. Multiple perspectives. One generation ready to lead.
+            Five forums. Multiple perspectives. One generation ready to lead.
           </p>
           <div className="w-24 h-[2px] bg-[#C8A45D] mt-4" />
         </div>
@@ -60,7 +59,7 @@ export const Committees: React.FC<CommitteesProps> = ({ onRegisterClick }) => {
                   : "bg-[#10162B] text-[#F2EBDD]/70 border border-[#C8A45D]/20 hover:border-[#C8A45D]/60 hover:text-[#F2EBDD]"
               }`}
             >
-              {cat === "ALL" ? "ALL COMMITTEES (7)" : cat}
+              {cat === "ALL" ? `ALL COMMITTEES (${committeesData.length})` : cat}
             </button>
           ))}
         </div>
@@ -71,7 +70,7 @@ export const Committees: React.FC<CommitteesProps> = ({ onRegisterClick }) => {
             <div
               key={committee.id}
               onClick={() => setActiveCommittee(committee)}
-              className="group cursor-pointer p-8 rounded-lg bg-[#10162B] border border-[#C8A45D]/25 hover:border-[#C8A45D] transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between shadow-xl relative overflow-hidden"
+              className="group cursor-pointer p-8 rounded-xl bg-[#10162B] border border-[#C8A45D]/25 hover:border-[#C8A45D] transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between shadow-xl relative overflow-hidden"
             >
               {/* Background Subtle Watermark */}
               <div className="absolute -bottom-6 -right-6 font-serif-editorial text-8xl font-bold text-[#C8A45D]/5 pointer-events-none select-none group-hover:text-[#C8A45D]/10 transition-colors">
@@ -97,16 +96,16 @@ export const Committees: React.FC<CommitteesProps> = ({ onRegisterClick }) => {
                 <h3 className="font-serif-editorial text-3xl font-bold text-[#F2EBDD] group-hover:text-[#C8A45D] transition-colors mb-1">
                   {committee.name}
                 </h3>
-                <p className="text-xs font-sans-ui text-[#D8C8A8]/70 mb-4 truncate">
+                <p className="text-xs font-sans-ui text-[#D8C8A8]/70 mb-4 line-clamp-1">
                   {committee.fullName}
                 </p>
 
                 {/* Agenda Box */}
-                <div className="p-4 rounded bg-[#080B16] border-l-2 border-[#C8A45D] mb-4">
+                <div className="p-4 rounded-lg bg-[#080B16] border-l-2 border-[#C8A45D] mb-4">
                   <span className="text-[10px] font-sans-ui tracking-widest text-[#C8A45D] uppercase block mb-1">
-                    AGENDA
+                    OFFICIAL AGENDA
                   </span>
-                  <p className="font-serif-editorial text-base font-semibold text-[#F2EBDD] line-clamp-2">
+                  <p className="font-serif-editorial text-sm font-semibold text-[#F2EBDD] line-clamp-3 leading-relaxed">
                     "{committee.agenda}"
                   </p>
                 </div>
@@ -120,7 +119,7 @@ export const Committees: React.FC<CommitteesProps> = ({ onRegisterClick }) => {
                     {committee.focusAreas.slice(0, 3).map((area, fIdx) => (
                       <span
                         key={fIdx}
-                        className="text-[11px] font-sans-ui px-2 py-0.5 rounded bg-[#10162B] border border-[#C8A45D]/15 text-[#F2EBDD]/80"
+                        className="text-[11px] font-sans-ui px-2 py-0.5 rounded bg-[#080B16] border border-[#C8A45D]/15 text-[#F2EBDD]/80"
                       >
                         {area}
                       </span>

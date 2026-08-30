@@ -6,49 +6,49 @@ export const Awards: React.FC = () => {
     {
       title: "BEST DELEGATE",
       points: "10 POINTS",
-      description: "Highest commendation for parliamentary dominance, policy knowledge, and diplomatic leadership in committee.",
+      description: "Highest committee commendation for parliamentary dominance, nuanced policy analysis, and diplomatic leadership in committee.",
       icon: Trophy,
       category: "Committee Award",
     },
     {
       title: "HIGH COMMENDATION",
       points: "8 POINTS",
-      description: "Awarded for exceptional debate performance, legal reasoning, and active caucus leadership.",
+      description: "Awarded for exceptional debate performance, evidentiary reasoning, and proactive caucus leadership.",
       icon: Award,
       category: "Committee Award",
     },
     {
       title: "SPECIAL MENTION",
       points: "5 POINTS",
-      description: "Recognizing outstanding research, consistent participation, and constructive resolution drafting.",
+      description: "Recognizing thorough research, consistent participation, and constructive resolution drafting.",
       icon: Star,
       category: "Committee Award",
     },
     {
       title: "BEST DELEGATION",
-      points: "TROPHY & TITLE",
-      description: "Premier delegation trophy awarded to the school or university team with the highest aggregate points.",
+      points: "HIGHEST INSTITUTIONAL HONOUR",
+      description: "Premier institutional honour awarded to the school or university team securing the highest cumulative points (Min. 8 delegates).",
       icon: Users,
       category: "Delegation Award",
     },
     {
       title: "BEST REPORTER",
       points: "5 POINTS",
-      description: "Awarded to the International Press delegate producing the sharpest parliamentary news reports.",
+      description: "Awarded to the International Press delegate producing the sharpest, most accurate committee news dispatches.",
       icon: FileText,
       category: "International Press",
     },
     {
       title: "BEST CARICATURIST",
       points: "5 POINTS",
-      description: "Recognizing political satire, editorial illustration, and creative parliamentary commentary.",
+      description: "Recognizing editorial political satire, visual commentary, and artistic excellence.",
       icon: Palette,
       category: "International Press",
     },
     {
       title: "BEST PHOTOGRAPHER",
       points: "5 POINTS",
-      description: "Awarded for capturing compelling documentary photographs of committee deliberations.",
+      description: "Awarded for capturing compelling documentary photojournalism throughout the summit.",
       icon: Camera,
       category: "International Press",
     },
@@ -60,13 +60,13 @@ export const Awards: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <span className="text-xs font-sans-ui font-bold tracking-[0.3em] text-[#C8A45D] uppercase mb-2">
-            RECOGNITION & REWARDS
+            RECOGNITION & COMMENDATIONS
           </span>
           <h2 className="font-serif-editorial text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2EBDD]">
             EXCELLENCE DESERVES RECOGNITION
           </h2>
-          <p className="font-serif-editorial text-lg italic text-[#D8C8A8] mt-2">
-            Honouring outstanding debate, diplomacy, research, and journalism.
+          <p className="font-serif-editorial text-lg italic text-[#D8C8A8] mt-2 max-w-2xl">
+            Honouring outstanding debate, diplomacy, research, and journalism at NITI NAYAK 2026.
           </p>
           <div className="w-24 h-[2px] bg-[#C8A45D] mt-4" />
         </div>
@@ -80,18 +80,18 @@ export const Awards: React.FC = () => {
             return (
               <div
                 key={idx}
-                className={`p-6 rounded-lg border transition-all duration-300 flex flex-col justify-between relative group ${
+                className={`p-6 rounded-xl border transition-all duration-300 flex flex-col justify-between relative group ${
                   isDelegationTrophy
                     ? "bg-gradient-to-b from-[#10162B] to-[#080B16] border-[#C8A45D] md:col-span-2 xl:col-span-2 shadow-2xl shadow-[#C8A45D]/15"
-                    : "bg-[#10162B] border-[#C8A45D]/20 hover:border-[#C8A45D]/60"
+                    : "bg-[#10162B] border-[#C8A45D]/20 hover:border-[#C8A45D]/60 shadow-lg"
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 rounded bg-[#080B16] border border-[#C8A45D]/40 flex items-center justify-center text-[#C8A45D]">
+                    <div className="w-10 h-10 rounded-lg bg-[#080B16] border border-[#C8A45D]/40 flex items-center justify-center text-[#C8A45D]">
                       <IconComp className="w-5 h-5" />
                     </div>
-                    <span className="text-[10px] font-sans-ui font-bold px-2.5 py-1 rounded bg-[#C8A45D]/20 text-[#C8A45D]">
+                    <span className="text-[10px] font-sans-ui font-bold px-2.5 py-1 rounded bg-[#C8A45D]/20 text-[#C8A45D] border border-[#C8A45D]/30">
                       {award.points}
                     </span>
                   </div>
